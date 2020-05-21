@@ -27,6 +27,14 @@ You are likely to have to make some modifications to it in order to modify paths
 ## Outputs
 - output several figures, tables and statistics 
 
+## Dependencies
+Perl core  
+ape R pachage  
+phangorn R pachage  
+reshape2 R pachage  
+ggplot2 R pachage  
+
+
 This is a two steps pipeline :
 
 ## first step in bash / perl:
@@ -34,7 +42,7 @@ This is a two steps pipeline :
 
 Production of a matrix like
 
-		EPI_ISL_43074	EPI_ISL_43074	EPI_ISL_43074	EPI_ISL_43074
+		Isolate_1	Isolate_2	Isolate_3	Isolate_4
 	1912	"ref"	"ref"	"not_ref"	"ref"
 	11083	"ref"	"not_ref"	"ref"	"undef"
 	23043	"ref"	"ref"	"not_ref"	"ref"
