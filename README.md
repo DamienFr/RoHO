@@ -3,6 +3,7 @@
 ![schematics](https://github.com/DamienFr/RoHO/blob/master/schematics.png)
 
 This repository contains scripts and command line used to compute the RoHO index of a set of high quality filtered homoplasies. It has been used in the publication  
+
 No evidence for increased transmissibility from recurrent mutations in SARS-CoV-2  
 Lucy van Dorp*, Damien Richard*, Cedric CS. Tan, Liam P. Shaw, Mislav Acman, François Balloux   
 \*contributed equally   
