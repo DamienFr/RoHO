@@ -16,7 +16,7 @@ You are likely to have to make some modifications to it in order to modify paths
 - A fasta reference genome (not provided, Wuhan-Wu-1 download here :https://www.ncbi.nlm.nih.gov/search/api/download-sequence/?db=nuccore&id=NC_045512.2)
 - A list of high quality homoplasy positions (provided)
 - Homoplasyfinder Consistency Index Report (provided, output file of Homoplasyfinder)
-- Annotated tree file (provided, output file of Homoplasyfinder)
+- Annotated tree file (not provided due to copyright issues, output file of Homoplasyfinder)
 - Alignement file (not provided due to copyright issues, fasta file of aligned sequences from Gisaid)
 
 ## Outputs
