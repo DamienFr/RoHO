@@ -1,5 +1,26 @@
 # Ratio of Homoplasic Offspring (RoHO)
 
+This repository contains scripts and command line used to compute the RoHO index of a set of high quality filtered homoplasies. Ithas been used in the publication "to come".
+
+The RoHO index is the ratio of the number of descendents of sister clades with and without a specific mutation over all independent emergences of a homoplasic allele in a phylogeny.
+
+It computes the RoHO index of a set of high quality filtered homoplasies and output several figures, tables and statistics 
+takes as input the raw sequencing reads (fastq) of 348 SARS-CoV-2 isolates and outputs a set of SNP and nucleotides alignements.
+
+The script 'Main_homoplasy.sh" is to be run in a unix command line step by step to ensure proper functioning.
+You are likely to have to make some modifications to it in order to modify paths etc.
+
+## Inputs
+- A fasta reference genome (not provided, Wuhan-Wu-1 download here :https://www.ncbi.nlm.nih.gov/search/api/download-sequence/?db=nuccore&id=NC_045512.2)
+- A list of high quality homoplasy positions (provided)
+- Homoplasyfinder Consistency Index Report (provided, output file of Homoplasyfinder)
+- Annotated tree file (provided, output file of Homoplasyfinder)
+- Alignement file (not provided due to copyright issues, fasta file of aligned sequences from Gisaid)
+
+## Outputs
+- 07.filtrated_WGS_all_sites.fasta Multifasta aligned file 
+- 07.filtrated_WGS_only_variant.fasta Multifasta aligned file 
+
 This is a two steps pipeline :
 
 ## first step in bash / perl:
