@@ -1,6 +1,6 @@
 # Ratio of Homoplasic Offspring (RoHO)
 
-![schematics](https://raw.githubusercontent.com/DamienFr/RoHO/master/schematics.png)
+![schematics](https://github.com/DamienFr/RoHO/blob/master/schematics.png)
 
 This repository contains scripts and command line used to compute the RoHO index of a set of high quality filtered homoplasies. It has been used in the publication "to come".
 
