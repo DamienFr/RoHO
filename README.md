@@ -1,5 +1,7 @@
 # Ratio of Homoplasic Offspring (RoHO)
 
+![schematics](https://raw.githubusercontent.com/DamienFr/RoHO/master/schematics.png)
+
 This repository contains scripts and command line used to compute the RoHO index of a set of high quality filtered homoplasies. It has been used in the publication "to come".
 
 The RoHO index is the ratio of the number of descendents of sister clades with and without a specific mutation over all independent emergences of a homoplasic allele in a phylogeny.
