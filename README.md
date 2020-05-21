@@ -50,3 +50,5 @@ I go through the phylogeny and for each node annotated as giving rise to an homo
 
 See publication
 
+This Readme file will be edited and completed more thoroughly in the days to come.
+A test dataset with no copyright issue will be provided in order to get the scripts running
