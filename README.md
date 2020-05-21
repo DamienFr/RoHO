@@ -7,6 +7,9 @@ The RoHO index is the ratio of the number of descendents of sister clades with a
 The script 'Main_homoplasy.sh" is to be run in a unix command line step by step to ensure proper functioning.
 You are likely to have to make some modifications to it in order to modify paths etc.
 
+
+** This script is very likely to crash as it was not developped for general use but for the study of one particular dataset **
+
 ## Inputs
 - A fasta reference genome (not provided, Wuhan-Wu-1 download here :https://www.ncbi.nlm.nih.gov/search/api/download-sequence/?db=nuccore&id=NC_045512.2)
 - A list of high quality homoplasy positions (provided)
