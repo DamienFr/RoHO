@@ -48,7 +48,5 @@ I go through the phylogeny and for each node annotated as giving rise to an homo
 
 ## Possible caveats:
 
-I always consider that the "not_ref" allele is the "homoplasic one". This should be ok as the ref allele is near the root ...
-
-I do not take into account nested reported homoplasic nodes
+See publication
 
