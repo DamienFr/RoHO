@@ -62,10 +62,9 @@ The matrix has the following form :
 In the filtered phylogeny (tree file), 
 For each filtered node of the phylogeny annotated by HomoplasyFinder as corresponding to an ancestor that acquired a homoplasy, this script counts the number of offsprings having "ref", "not_ref" or "undef" alleles based on the input matrix.
 To be considered, an internal node must meet the following criterion :   
-No children nodes themselves annotated as carrying the homoplasy.   
-Having at least three descendant tips.    
-
-Our third quality criterion comprises two stringency levels and is not illustrated in the figure. In order to consider RoHO scores for an homoplasic position, it requires that at least n=5 or n=10 nodes satisfy the two first criteria.
+* No children nodes themselves annotated as carrying the homoplasy.   
+* Having at least three descendant tips.    
+* An homoplasic position is only considered for RoHo score computation if at least n=5 or n=10 nodes satisfy the two first criteria.
 
 
 This Readme file will be edited and completed more thoroughly in the days to come.
