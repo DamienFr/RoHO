@@ -7,7 +7,7 @@ This repository contains scripts and command line used to compute the RoHO index
 No evidence for increased transmissibility from recurrent mutations in SARS-CoV-2  
 Lucy van Dorp*, Damien Richard*, Cedric CS. Tan, Liam P. Shaw, Mislav Acman, François Balloux   
 \*contributed equally   
-..link..
+https://doi.org/10.1101/2020.05.21.108506 
 
 The RoHO index is the ratio of the number of descendents of sister clades with and without a specific mutation over all independent emergences of a homoplasic allele in a phylogeny.
 
