@@ -28,7 +28,7 @@ You are likely to have to make some modifications to it in order to modify paths
 - Alignement file (not provided due to copyright issues, fasta file of aligned sequences from Gisaid)
 
 ## Outputs
-- output several figures, tables and statistics 
+- Outputs several figures, tables and statistics 
 
 ## Dependencies
 Perl core  
