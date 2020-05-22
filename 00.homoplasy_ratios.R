@@ -124,16 +124,6 @@ ggplot(out_table_ratios_long[out_table_ratios_long[,2]=="homo/not_homo",],
   ggtitle(paste("log of the ratio Homoplasy allele count / non-homoplasy allele count\nnb of studied homoplasy positions = ",nb_unique_nodes,", nb of studied paired count values= ",effectif,"\ndashed line = mediane",sep=""))
 dev.off()
 
-jpeg(filename = paste("fig_3.nothomo_vs_homo_ratio_along_genome_min_offspring_",min_offspring,".jpg",sep=""), width = 1000, height = 700)
-ggplot(out_table_ratios_long[out_table_ratios_long[,2]=="not_homo/homo",],
-       aes(x=position, y=log(value), group=position))+
-  geom_boxplot(outlier.shape = NA)+
-  stat_summary(geom="point", fun.y=median)+
-  geom_hline(yintercept = median(out_table_ratios_long[out_table_ratios_long[,2]=="not_homo/homo","value"]), linetype='dashed')+
-  ggtitle(paste("log of the ratio non-Homoplasy allele count / homoplasy allele count\nnb of studied homoplasy positions = ",nb_unique_nodes,", nb of studied paired count values= ",effectif,"\ndashed line = mediane",sep=""))
-dev.off()
-
-
 #####################################################################################
 ################### filtering of the data : nb of replicates ########################
 ############ eg. 5 nodes in the phylogeny detected as origin of a new homoplasy #####
