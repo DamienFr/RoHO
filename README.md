@@ -38,9 +38,9 @@ reshape2 R package
 ggplot2 R package  
 
 
-This is a two steps pipeline :
+# This is a two steps pipeline :
 
-## First step in bash / perl:
+### First step in bash / perl:
 Main_homoplasy.sh
 
 From a filtered homoplasy list, this script :
@@ -56,7 +56,7 @@ The matrix has the following form :
 
 
 
-## Second step in R:
+### Second step in R:
 00.homoplasy_ratios.R
 
 In the filtered phylogeny (tree file), 
