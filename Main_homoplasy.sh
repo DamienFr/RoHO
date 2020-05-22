@@ -85,12 +85,10 @@ if(lc($temp) eq "n"){ print "\tundef" ; $nnn++ }else{
 if(lc($temp) ne lc($allele_ref)){ print "\tnot_ref"}else{ print "\tref" }}
 } 
 print "\n";
-# print $fields[0] . "\t" . $allele_ref . "\n";
 }
 
 }; print STDERR "number of cumulative n at homo positions : $nnn\n";
 close GB; ' > ./${folder}/input_matrix
-
 
 
 
