@@ -32,18 +32,22 @@ You are likely to have to make some modifications to it in order to modify paths
 
 ## Dependencies
 Perl core  
-ape R pachage  
-phangorn R pachage  
-reshape2 R pachage  
-ggplot2 R pachage  
+ape R package  
+phangorn R package  
+reshape2 R package  
+ggplot2 R package  
 
 
 This is a two steps pipeline :
 
-## first step in bash / perl:
-00.Main_homoplasy.sh
+## First step in bash / perl:
+Main_homoplasy.sh
 
-Production of a matrix like
+From a filtered homoplasy list, this script :
+* Converts a raw homoplasyfinder annotated tree to a filtered homoplasyfinder annotated tree
+* Produces a matrix of alleles for each isolates at variable positions from an alignement fasta file
+
+The matrix has the following form :
 
 		Isolate_1	Isolate_2	Isolate_3	Isolate_4
 	1912	"ref"	"ref"	"not_ref"	"ref"
@@ -52,11 +56,16 @@ Production of a matrix like
 
 
 
-## second step in R:
+## Second step in R:
 00.homoplasy_ratios.R
 
-I go through the phylogeny and for each node annotated as giving rise to an homoplasy i simply count the number of offsprings having "ref", "not_ref" or "undef" alleles based on the input matrix
+In the filtered phylogeny (tree file), 
+For each filtered node of the phylogeny annotated by HomoplasyFinder as corresponding to an ancestor that acquired a homoplasy, this script counts the number of offsprings having "ref", "not_ref" or "undef" alleles based on the input matrix.
+To be considered, an internal node must meet the following criterion :   
+No children nodes themselves annotated as carrying the homoplasy.   
+Having at least three descendant tips.    
 
+Our third quality criterion comprises two stringency levels and is not illustrated in the figure. In order to consider RoHO scores for an homoplasic position, it requires that at least n=5 or n=10 nodes satisfy the two first criteria.
 
 
 This Readme file will be edited and completed more thoroughly in the days to come.
