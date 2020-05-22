@@ -38,7 +38,7 @@ reshape2 R package
 ggplot2 R package  
 
 
-# This is a two steps pipeline :
+## This is a two steps pipeline :
 
 ### First step in bash / perl:
 Main_homoplasy.sh
