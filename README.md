@@ -69,4 +69,4 @@ To be considered, an internal node must meet the following criterion :
 
 This study has been possible only thanks to the very large number of scientists in originating and submitting labs who have readily made available SARS-CoV-2 assemblies to the research community. They are listed in originating-laboratories.txt and submitting-laboratories.txt files.
 
-A test dataset with no copyright issue will be provided in order to get the scripts running
+A test dataset with no copyright issue will hopefully be provided in a few days in order to get the scripts running
