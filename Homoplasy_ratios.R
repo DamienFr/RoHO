@@ -12,7 +12,7 @@ library(ggplot2)
 
 #folder_output <- "./dataset_5.1/"
 args <- commandArgs(TRUE)
-folder_output <- args[1]
+folder_output <- paste("./",args[1],"/",sep="")
 setwd(folder_output)
 
 arbre_filtered_file <- list.files(path = ".", pattern = "^annotatedNewickTree_.*.tree_filtered")
