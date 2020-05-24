@@ -1,18 +1,24 @@
 # Ratio of Homoplasic Offspring (RoHO)
 
+
+<p align="center">
 ![schematics](https://github.com/DamienFr/RoHO/blob/master/schematics.png)
+</p>
+
 
 ## This Readme file will be edited and completed more thoroughly in the days to come.
 
 
 This repository contains scripts and command line used to compute the RoHO index of a set of high quality filtered homoplasies. It has been used in the publication  
 
-No evidence for increased transmissibility from recurrent mutations in SARS-CoV-2  
+**No evidence for increased transmissibility from recurrent mutations in SARS-CoV-2**  
 Lucy van Dorp*, Damien Richard*, Cedric CS. Tan, Liam P. Shaw, Mislav Acman, François Balloux   
 \*contributed equally   
 https://doi.org/10.1101/2020.05.21.108506 
 
 The RoHO index is the ratio of the number of descendents of sister clades with and without a specific mutation over all independent emergences of a homoplasic allele in a phylogeny.
+
+
 
 The script 'Main_homoplasy.sh" is to be run in a unix command line step by step to ensure proper functioning.
 You are likely to have to make some modifications to it in order to modify paths etc.
