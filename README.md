@@ -56,7 +56,7 @@ The matrix has the following form :
 
 
 ### Second step in R:
-00.homoplasy_ratios.R
+Homoplasy_ratios.R
 
 In the filtered phylogeny (tree file), 
 For each filtered node of the phylogeny annotated by HomoplasyFinder as corresponding to an ancestor that acquired a homoplasy, this script counts the number of offsprings having "ref", "not_ref" or "undef" alleles based on the input matrix.
