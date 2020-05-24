@@ -1,4 +1,4 @@
-# Ratio of Homoplasic Offspring (RoHO)
+# SARS-CoV-2 Ratio of Homoplasic Offspring (RoHO)
 
 ![schematics](https://github.com/DamienFr/RoHO/blob/master/schematics.png)
 
@@ -9,9 +9,9 @@ Lucy van Dorp*, Damien Richard*, Cedric CS. Tan, Liam P. Shaw, Mislav Acman, Fra
 \*contributed equally   
 https://doi.org/10.1101/2020.05.21.108506 
 
+Homoplasies are mutations that emerged repeatedly and independently. They are good candidates for sites under natural selection. In our study, we use a phylogenetic index to assess whether particular homoplasic mutations increase transmissibility of SARS-CoV-2. To do so, we quantify the relative number of descendants in sister clades with and without a specific allele. This github repository contains the code used to do so.
+
 The RoHO index is the ratio of the number of descendents of sister clades with and without a specific mutation over all independent emergences of a homoplasic allele in a phylogeny.
-
-
 
 The script 'Main_homoplasy.sh" is to be run in a unix command line step by step to ensure proper functioning.
 You are likely to have to make some modifications to it in order to modify paths etc.
@@ -65,6 +65,4 @@ To be considered, an internal node must meet the following criterion :
 * Having at least three descendant tips.    
 * An homoplasic position is only considered for RoHo score computation if at least n=5 or n=10 nodes satisfy the two first criteria.
 
-
-This Readme file will be edited and completed more thoroughly in the days to come.
 A test dataset with no copyright issue will be provided in order to get the scripts running
