@@ -13,10 +13,9 @@ echo $annotated_tree
 echo $alignement_file
 echo $reference_fasta_genome
 
-############################################################################################################
-###############  SCRIPT 1 To use only if you want to use a subset of the homoplasies only ##################
-###### This script produce a tree file with spurious homoplasies removed from the annotations ##############
-############################################################################################################
+################################################################################################################
+############## This script produce a tree file keeping only selected homoplasies as annotations ################
+################################################################################################################
 env high_qual_homoplasies=$high_qual_homoplasies total_consistencyIndexReport=$total_consistencyIndexReport perl -F',' -ane 'BEGIN{
 open (GA, "<", $ENV{high_qual_homoplasies}) or die "Cannot open input file $!";
 while ($line = <GA>) {
@@ -43,11 +42,14 @@ foreach $key (keys %h_to_delete){
 $_ =~ s/(\)|-)$key(:|-)/$1$2/g; s/--/-/g ;  s/\)-:/\):/g ; s/\)-/\)/g ;
 } print ' $annotated_tree > ${annotated_tree}_filtered
 
-
-# the folowing script just produces a matrix giving the allele of each homoplasy site for each isolate. Alleles can be "ref" or "not_ref" or "undef"
-# so in order to do that i open the alignement file, store the genomes, open the ref genome, also store its genome.
-# then i get the positions we are interested in (filtred homoplasies) and while doing so i compare the allele of the ref with the allele of the isolates.
-#  "Ns" originating from ambiguous sites are noted "undef"
+###############################################################################################################
+########### This script produces a matrix giving the allele of each homoplasy site for each isolate. ##########
+############################ Alleles can be "ref" or "not_ref" or "undef" #####################################
+###############################################################################################################
+############# Detail : Alignement file is read, genomes are stored, ref genome is opened and also stored ######
+#################### then i compare isolate and ref allele for each selected homoplasies ######################
+#################### "Ns" originating from ambiguous sites in isolates are noted "undef" ######################
+###############################################################################################################
 env total_consistencyIndexReport=$total_consistencyIndexReport alignement_file=$alignement_file reference_fasta_genome=$reference_fasta_genome perl -e '
 open (GC, "<", $ENV{alignement_file}) or die "Cannot open input file $!";
 while ($line = <GC>) {
@@ -91,8 +93,21 @@ print "\n";
 close GB; ' > ./${folder}/input_matrix
 
 
+######################################################################################################
+############## This R script computes the actual Ratio of Homoplasic Offspring (RoHO) ################
+######################################################################################################
+######################################################################################################
+#### Detail: For each node of the phylogeny, this script counts the number of offsprings #############
+########## having "ref", "not_ref" or "undef" alleles based on the input matrix. #####################
+########## To be considered, an internal node must meet the following criterion : ####################
+############# * No children nodes themselves annotated as carrying the homoplasy. ####################
+############# * Having at least three descendant tips. ###############################################
+############# * An homoplasic position is only considered for RoHo score computation if ##############
+################ at least n=5 or n=10 nodes satisfy the two first criteria. ##########################
+######################################################################################################
 
 
+Rscript --vanilla Homoplasy_ratios.R ${folder}
 
 
 
