@@ -36,11 +36,11 @@ annotation_nodes_useful_format[,1] <- as.numeric(as.character(annotation_nodes_u
 architecture_arbre <- Descendants(arbre_filtered,type="all")
 
 # FIRST CONDITION
-# we don't want to study nodes that were annotated as carying an homoplasy AND have less than X descendants TIPS (equivalent to N nodes + tips)
+# we don't want to study nodes that were annotated as carying an homoplasy AND have less than X descendants TIPS 
 # architecture_arbre[[312]] from 1 to 312 are tips
 nb_offspring <- unlist(lapply(architecture_arbre, length))
 names(nb_offspring) <- seq(from=1,to=length(nb_offspring),by=1)
-min_offspring <- 5
+min_offspring <- 3
 enough_offsprings <- nb_offspring[nb_offspring>=min_offspring]
 
 # STILL FIRST CONDITION
