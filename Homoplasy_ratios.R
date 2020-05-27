@@ -40,7 +40,7 @@ architecture_arbre <- Descendants(arbre_filtered,type="all")
 # architecture_arbre[[312]] from 1 to 312 are tips
 nb_offspring <- unlist(lapply(architecture_arbre, length))
 names(nb_offspring) <- seq(from=1,to=length(nb_offspring),by=1)
-min_offspring <- 3
+min_offspring <- 5
 enough_offsprings <- nb_offspring[nb_offspring>=min_offspring]
 
 # STILL FIRST CONDITION
