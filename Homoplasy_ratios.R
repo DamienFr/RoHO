@@ -160,11 +160,11 @@ write.table(t(statistics), file = paste("Stats_min_",nb_rep,"_replicates_min_off
 
 out_table_ratios_restricted_long <- as.data.frame(cbind(position=out_table_restricted[,1],"homo/not_homo"=out_table_restricted[,2]/out_table_restricted[,3]))
 
-ratios_mean_by_position <- aggregate(out_table_ratios_restricted_long[,2], list(Nucl_pos = out_table_ratios_restricted_long[,1]),mean)
-ratios_median_by_position <- aggregate(out_table_ratios_restricted_long[,2], list(Nucl_pos = out_table_ratios_restricted_long[,1]),median)
-ratios_sd_by_position <- aggregate(out_table_ratios_restricted_long[,2], list(Nucl_pos = out_table_ratios_restricted_long[,1]),sd)
+ratios_mean_by_position <- aggregate(log10(out_table_ratios_restricted_long[,2]), list(Nucl_pos = out_table_ratios_restricted_long[,1]),mean)
+ratios_median_by_position <- aggregate(log10(out_table_ratios_restricted_long[,2]), list(Nucl_pos = out_table_ratios_restricted_long[,1]),median)
+ratios_sd_by_position <- aggregate(log10(out_table_ratios_restricted_long[,2]), list(Nucl_pos = out_table_ratios_restricted_long[,1]),sd)
 ratios_mean_by_position <- cbind(ratios_mean_by_position,ratios_median_by_position[,2],ratios_sd_by_position[,2])
-colnames(ratios_mean_by_position) <- c("Position","Mean_RoHo","Median_RoHo","Standard_deviation_RoHo")
+colnames(ratios_mean_by_position) <- c("Position","Mean_log10RoHo","Median_log10RoHo","Standard_deviation_log10RoHo")
 
 write.table(ratios_mean_by_position, file = paste("Homoplasy_pos_min_",nb_rep,"_replicates_min_offspring_",min_offspring,".tsv",sep=""), append = FALSE, quote = F, sep = "\t",eol = "\n", na = "NA", dec = ".", row.names = F,col.names = T, qmethod = c("escape", "double"), fileEncoding = "")
 
