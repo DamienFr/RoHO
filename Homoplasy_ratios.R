@@ -173,7 +173,7 @@ table_effectifs <- as.data.frame(t(rbind(pos=as.numeric(names(table_effectifs)),
 
 custom_x_breaks <- c(0,sort(unique(out_table_ratios_restricted_long[,1])),29903)
 
-jpeg(filename = paste("fig_3.RoHo_along_genome_min_",nb_rep,"_replicates_min_offspring_",min_offspring,".svg",sep=""), width = 1000, height = 500)
+jpeg(filename = paste("fig_3.RoHo_along_genome_min_",nb_rep,"_replicates_min_offspring_",min_offspring,".jpg",sep=""), width = 1000, height = 500)
 ggplot(out_table_ratios_restricted_long, aes(x=position, y=log10(out_table_ratios_restricted_long[,2]), group=position))+
   coord_cartesian(xlim = c(0, 29903), ylim = c(ylimplot_min,ylimplot_max)) +
   geom_hline(yintercept=0, linetype="dashed", color = "black")+
