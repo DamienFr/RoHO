@@ -64,12 +64,13 @@ for(homoplasy in homoplasies){
     node <- line+length(arbre_filtered$tip.label)
     tips <- architecture_arbre[[node]][architecture_arbre[[node]]<=(length(arbre_filtered$tip.label))]
     child_nodes <- architecture_arbre[[node]][architecture_arbre[[node]]>(length(arbre_filtered$tip.label))]
+      child_nodes <- child_nodes - length(arbre_filtered$tip.label)
     # SECOND CONDITION 
     # we don't want the studied node to have any children node displaying the same homoplasy
     # so if we match a line of annotation_nodes_useful_format with the same homoplasy position on a tip descendant of the one we're studying, we discard it
-    boolean_only_false_to_continue <- unlist(lapply(child_nodes, function(x) { annotation_nodes_useful_format[,1]==homoplasy & annotation_nodes_useful_format[,2]==x  }))
+    boolean_only_false_to_continue <- sum(unlist(lapply(child_nodes, function(x) { annotation_nodes_useful_format[,1]==homoplasy & annotation_nodes_useful_format[,2]==x  })))
     
-    if( sum(boolean_only_false_to_continue) == 0 ){
+    if( boolean_only_false_to_continue == 0 ){
       
       NOT_homoplasy_result <- 0
       homoplasy_result <- 0
