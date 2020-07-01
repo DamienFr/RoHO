@@ -35,6 +35,9 @@ ape R package
 phangorn R package  
 reshape2 R package  
 ggplot2 R package  
+doParallel (optional, needed for parallelization)  
+foreach (optional, needed for parallelization)  
+
 
 
 ## This is a two step pipeline :
@@ -61,8 +64,8 @@ The matrix has the following form :
 In the filtered phylogeny (tree file), for each filtered node of the phylogeny annotated by HomoplasyFinder as corresponding to an ancestor that acquired a homoplasy, this script counts the number of offsprings having "ref", "not_ref" or "undef" alleles based on the input matrix.
 To be considered, an internal node must meet the following criterion :
 * No children nodes themselves annotated as carrying the homoplasy.   
-* Having at least three descendant tips.    
-* An homoplasic position is only considered for RoHo score computation if at least n=5 or n=10 nodes satisfy the two first criteria.
+* Having at least two descendant tips of each allele    
+* An homoplasic position is only considered for RoHo score computation if at least n=3 or n=5 nodes satisfy the two first criteria.
 
 # Acknowledgements
 
