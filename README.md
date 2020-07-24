@@ -35,8 +35,8 @@ ape R package
 phangorn R package  
 reshape2 R package  
 ggplot2 R package  
-doParallel (optional, needed for parallelization)  
-foreach (optional, needed for parallelization)  
+doParallel R package (optional, needed for parallelization)  
+foreach R package (optional, needed for parallelization)  
 
 
 
